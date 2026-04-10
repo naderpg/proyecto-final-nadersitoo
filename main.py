@@ -15,7 +15,7 @@ try:
     import modulo_de_utilidades
 except ImportError as e:
     print(f"[ERROR] No se pudo encontrar el módulo {e.name}. Verifique los archivos .py.")
-    sys.exit(1)
+    # sys.exit(1) # Te recomiendo comentar esta línea temporalmente para probar el menú principal aunque no tengas los otros archivos creados.
 
 
 def mostrar_menu_principal():
@@ -30,23 +30,23 @@ def mostrar_menu_principal():
     print("0. Salir")
     print("-" * 50)
 
+
 def ejecutar_opcion(opcion):
     """
-    Gestiona la opción elegida y llama a la función principal del módulo.
+    Gestiona la opción elegida y llama a la función principal del módulo correspondiente.
     """
     if opcion == 1:
         print("[INFO] Iniciando Módulo de Organización...")
-        # Aquí se llamará al menú del módulo 'organizador'
-        # organizador.iniciar_menu() 
+        # modulo_organizador.iniciar_menu() 
     elif opcion == 2:
         print("[INFO] Iniciando Módulo de Análisis de Contenido...")
-        # analizador.iniciar_menu()
+        # modulo_de_analisis.iniciar_menu()
     elif opcion == 3:
         print("[INFO] Iniciando Módulo de Auditoría...")
-        # auditor.iniciar_menu()
+        # modulo_de_auditoria.iniciar_menu()
     elif opcion == 4:
         print("[INFO] Iniciando Generador de Reportes...")
-        # reportes.iniciar_menu()
+        # modulo_de_reportes.iniciar_menu()
     elif opcion == 0:
         print("Saliendo del Kit Multifuncional.")
         return False
@@ -54,6 +54,7 @@ def ejecutar_opcion(opcion):
         print("[ADVERTENCIA] Opción NO válida. Selecciona un número del 0 al 4.")
     
     return True
+
 
 def main():
     """Función principal del programa. Contiene el bucle de ejecución."""
@@ -73,6 +74,7 @@ def main():
             sys.exit(0)
         except Exception as e:
             print(f"[ERROR] Ocurrió un error inesperado: {e}")
+
 
 if __name__ == "__main__":
     main()
