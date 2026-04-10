@@ -31,3 +31,19 @@ Sistema desarrollado en Python para la automatización de tasks de gestion de ar
 - Registro historico: Actividades en registro_auditoria.csv
 - Monitoreo en tiempo real: Seguimiento de operaciones del sistema
 - Decoradores de auditoria: Registro automatico de funciones criticas
+graph TD
+    A[main.py<br>Menú Principal] --> B[Organizador]
+    A --> C[Analizador]
+    A --> D[Auditoría]
+    A --> E[Reportes]
+
+    B -.-> F{Utilidades<br>Herramientas}
+    C -.-> F
+    D -.-> F
+    E -.-> F
+
+    B --> G[(audit.log<br>Historial oculto)]
+    C --> G
+    D --> G
+    E --> G
+    F --> G
