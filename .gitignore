@@ -1,0 +1,44 @@
+# ==========================================
+# Archivos generados por el Kit Multifuncional
+# ==========================================
+# No queremos subir el log de actividades locales de cada usuario
+audit.log
+
+# Ignoramos la carpeta de reportes y todo su contenido (TXT y CSV)
+reportes/
+/reportes/*
+
+# ==========================================
+# Archivos de caché y compilación de Python
+# ==========================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ==========================================
+# Entornos Virtuales (Por si usas uno a futuro)
+# ==========================================
+venv/
+env/
+ENV/
+.env
+
+# ==========================================
+# Archivos del Sistema Operativo
+# ==========================================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ==========================================
+# Configuraciones de Editores de Código (IDE)
+# ==========================================
+.vscode/
+.idea/
+*.swp
+*.swo
