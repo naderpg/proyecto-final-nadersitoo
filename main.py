@@ -15,8 +15,7 @@ try:
     import modulo_de_utilidades
 except ImportError as e:
     print(f"[ERROR] No se pudo encontrar el módulo {e.name}. Verifique los archivos .py.")
-    # sys.exit(1) # Te recomiendo comentar esta línea temporalmente para probar el menú principal aunque no tengas los otros archivos creados.
-
+    sys.exit(1) 
 
 def mostrar_menu_principal():
     """Muestra el menú principal con las funcionalidades requeridas."""
@@ -37,16 +36,16 @@ def ejecutar_opcion(opcion):
     """
     if opcion == 1:
         print("[INFO] Iniciando Módulo de Organización...")
-        # modulo_organizador.iniciar_menu() 
+        modulo_organizador.iniciar_menu() 
     elif opcion == 2:
         print("[INFO] Iniciando Módulo de Análisis de Contenido...")
-        # modulo_de_analisis.iniciar_menu()
+        modulo_de_analisis.iniciar_menu()
     elif opcion == 3:
         print("[INFO] Iniciando Módulo de Auditoría...")
-        # modulo_de_auditoria.iniciar_menu()
+        modulo_de_auditoria.iniciar_menu()
     elif opcion == 4:
         print("[INFO] Iniciando Generador de Reportes...")
-        # modulo_de_reportes.iniciar_menu()
+        modulo_de_reportes.iniciar_menu()
     elif opcion == 0:
         print("Saliendo del Kit Multifuncional.")
         return False
